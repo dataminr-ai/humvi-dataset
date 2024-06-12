@@ -6,26 +6,28 @@ The dataset comprises articles in three languages (English, French, and Arabic) 
 ### Table of Contents
 - [davinci-dataset](#davinci-dataset)
     - [Table of Contents](#table-of-contents)
-- [Scraping URLs](#scraping-urls)
 - [Data Description](#data-description)
-
-# Scraping URLs
-The dataset does not include the article titles & full text due to TOS limitations. To hydrate the dataset you may scrape the URLs by running `data_collection/web_scrape.py`
-
-### `scrape_gdelt_articles.py`
-Collect the last N hours of GDelt articles, filter by country & scrape the webpage content.
-
-```
-python scrape_gdelt_articles.py \
-    --collect_n_hours 1
-```
+- [Data Collection](#data-collection)
 
 # Data Description
 The dataset includes the following splits:
-- Vanilla
-    - Train
-    - Test:
-- Full 
-    - Train: 
-    - Test
+- Core
+    - Train: `data/davinci_core_train.csv`
+    - Test: `data/davinci_core_test.csv`
+- Expansion 
+    - Train:  `data/davinci_expansion_train.csv`
+    - Test: `data/davinci_expansion_test.csv`
 - Unlabeled
+
+
+# Data Collection
+### Scraping URLs
+The dataset does not include article titles & full text due to TOS limitations. To hydrate the dataset you may scrape the URLs by running `data_collection/web_scrape.py`
+
+### GDelt Data Collection
+Run `data_collection/scrape_gdelt_articles.py` to collect the last N hours of GDelt articles, filter by country & scrape the webpage content.
+
+```
+python data_collection/scrape_gdelt_articles.py \
+    --collect_n_hours 1
+```
