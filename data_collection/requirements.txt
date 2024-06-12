@@ -1,0 +1,5 @@
+gdelt==0.1.14
+countrycode==0.4.0
+pandas==2.1.4
+goose3==3.1.9
+tqdm==4.66.2

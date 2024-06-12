@@ -10,7 +10,15 @@ The dataset comprises articles in three languages (English, French, and Arabic) 
 - [Data Description](#data-description)
 
 # Scraping URLs
-The dataset does not include the article titles & full text due to TOS limitations. To hydrate the dataset you may scrape the URLs by running `scrape.py`
+The dataset does not include the article titles & full text due to TOS limitations. To hydrate the dataset you may scrape the URLs by running `data_collection/web_scrape.py`
+
+### `scrape_gdelt_articles.py`
+Collect the last N hours of GDelt articles, filter by country & scrape the webpage content.
+
+```
+python scrape_gdelt_articles.py \
+    --collect_n_hours 1
+```
 
 # Data Description
 The dataset includes the following splits:

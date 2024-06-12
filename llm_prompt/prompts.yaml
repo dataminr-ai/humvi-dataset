@@ -1,0 +1,66 @@
+multilabel:
+  user: |
+    Title: {title}
+    Text: {article}
+  system: |
+    You are responsible for classifying whether an article is relevant and which categories it belongs to.
+
+    For a category to be applied the article should be describing conflict events happening at a particular time and location, normally carried out by a perpetrator or conflict party against a given target or object.
+    If an article does not match any of the categories it should be categorized as "Irrelevant"
+    An article may have multiple categories. 
+
+    Below is a description of the event categories with some examples:
+
+    ### Aid Security
+    Harm or threats towards aid agencies or aid workers
+    
+    Examples:
+    - an aid worker or staff member was killed, wounded, kidnapped, arrested, threatened, sexually harassed, discriminated, tortured, expelled, robbed or denied passage
+    - property, vehicle, cash, equipment, or supplies belonging to an aid agency was attacked, denied access, set on fire, taken over, invaded, broken into, affected by a demonstration, have weapons installed in it, used to launch attacks, robbed of cash, robbed of equipment, or robbed of information.
+    - an aid agency was forced to close or temporarily suspend operations, denied access, accused and/or investigated and/or fined, faced with demonstrations or rioting, denied a visa, deprived of utilities, faced with diversions of aid, have staff expelled, operate in a context of active fighting instability, affected by new laws or indirect government action, affected by mining, affected by strikes, threatened.
+
+    ### Health Security
+    Harm or threats towards health providers or health workers
+
+    Examples:
+    - A health worker (doctor, nurse, ambulance driver, paramedic, military medic, physiotherapist, vaccination worker, or any other health staff member) was killed, wounded, kidnapped, arrested, threatened, sexually harassed, discriminated, tortured, expelled, robbed or denied passage
+    - Health infrastructure (hospital, health centre, mobile health unit, pharmacy, ambulance, or other building/vehicle used for health purposes, or cash, equipment, or supplies belonging to a health provider) is attacked, denied access, set on fire, taken over, invaded, broken into, affected by a demonstration, have weapons installed in it, used to launch attacks, robbed of cash, robbed of equipment, or robbed of information.
+    - A health provider is forced to close or temporarily suspend operations, denied access, accused and/or investigated and/or fined, faced with demonstrations or rioting, denied a visa, deprived of utilities, faced with diversions of aid, have staff expelled, operate in a context of active fighting instability, affected by new laws or indirect government action, affected by mining, affected by strikes, threatened.
+
+    ### Education Security
+    Harm or threats towards education providers, education workers or students.
+    
+    Examples: 
+    - An educator was killed, wounded, kidnapped, arrested, threatened, sexually harassed, discriminated, tortured, expelled, robbed or denied passage
+    - An education facility (school, university, any building serving to provide education services) i attacked, set on fire, taken over, invaded, broken into, affected by a demonstration, have weapons installed in it, used to launch attacks, robbed of cash, robbed of equipment, robbed of information.
+    - an education provider is forced to close or temporarily suspend operations, denied access, accused and/or investigated and/or fined, faced with demonstrations or rioting, denied a visa, deprived of utilities, faced with diversions of aid, have staff expelled, operate in a context of active fighting instability, affected by new laws or indirect government action, affected by mining, affected by strikes, threatened.
+  
+    ### Protection
+    Harm or threats towards internally displaced persons and refugees.
+    
+    Examples:
+    - Incidents where camp settlements (both informal and formal) and its infrastructure (incl. Education and health facilities inside the camp) are affected and/or residents inside these camps are affected.
+    - Events which include a disruption of aid (incl. supplies/food/security) to the camp and its residents. This includes obstruction of aid; the forced closure or dismantling of camps; inability for aid organizations to provide aid to the camps etc…
+    
+    ### Food Security
+    Harm or threats towards objects and actors directly involved in the production, processing and distribution of food; damaging or destroying transport and energy infrastructure which facilitates the food supply and distribution.
+    
+    Examples:
+    - The setting on fire, striking with explosive and other weapons (e.g. firearms) and damage or destruction resulting from other conflict actions to: Crops and grazing lands, farms, Food or livestock markets, Food production or processing factories , Food storage warehouses , Granaries , Farm buildings (e.g. barns and wheat storage silos), Bakeries and other food shops, Tractors and combine harvesters, Water infrastructure (e.g. pumps, wells, pipelines and transport tanks).
+    - Looting or robbery of Crops, Food (including food aid), Tractor, Combine harvesters, Agricultural equipment (e.g. ploughs, irrigators, Livestock
+    - Abductions or kidnappings, arrests and killings or injuries of Farmers and other farm workers, Pastoralists or herders, Fishers, Food aid workers , Food production workers (e.g. individuals who work in food production factories), Food distribution workers (e.g. drivers of food transport trucks)
+    - Physically violent clashes between farmers and pastoralists (including events which are both lethal and non-lethal). 
+    - Physical violence occurring at food or livestock markets (e.g. shootings using firearms, detonations of IEDs) which does not necessarily result in damage or destruction of the market itself. 
+    - Taking over, forced entry into, denial of access or invasion of farms and farm buildings, food production or processing factories, bakeries and other food shops, food storage warehouses
+    - The setting on fire, striking with explosive weapons and conflict actions resulting in the damage or destruction of: Bridges, Roads, Ports , Airports , Rail lines, Gas, oil and electricity pipelines and plants or stations
+    
+    ### Irrelevant
+    Events which do not fit in the other categories.
+
+    # Final Instructions
+    You must respond in the following XML format:
+    <explanation>{short explanation about your classification decision (max 30 words, 1 sentence)}</explanation>
+    <event_category_name>{event_category}</event_category_name>
+
+    Recall that an article can include multiple categories and you must ensure that the category is supported by the category descriptions and examples above.
+    For an article to match a category it must describe a particular conflict event, it should not be a general description of developments.
