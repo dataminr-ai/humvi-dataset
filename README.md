@@ -1,10 +1,10 @@
-# davinci-dataset
-The DaVINCI dataset includes news articles about different types of violent incidents categorized by what type of humanitarian sector it can potentially affect, e.g. aid protection, food insecurity, healthcare security, education protection, and/or internally displaced people (IDP) protection. 
+# HUM-VI Dataset
+The HUM-VI dataset includes news articles about different types of violent incidents categorized by what type of humanitarian sector it can potentially affect, e.g. aid protection, food insecurity, healthcare security, education protection, and/or internally displaced people (IDP) protection. 
 
 The dataset comprises articles in three languages (English, French, and Arabic) from multiple different sources. We partnered with a data-backed humanitarian organization - [anonymous organization] to obtain real world ground truth labels for these datasets. 
 
 ### Table of Contents
-- [davinci-dataset](#davinci-dataset)
+- [HUM-VI Dataset](#hum-vi-dataset)
     - [Table of Contents](#table-of-contents)
 - [Data Description](#data-description)
 - [Data Collection](#data-collection)
@@ -12,11 +12,11 @@ The dataset comprises articles in three languages (English, French, and Arabic) 
 # Data Description
 The dataset includes the following splits:
 - Core
-    - Train: `data/davinci_core_train.csv`
-    - Test: `data/davinci_core_test.csv`
+    - Train: `data/humvi_core_train.csv`
+    - Test: `data/humvi_core_test.csv`
 - Expansion 
-    - Train:  `data/davinci_expansion_train.csv`
-    - Test: `data/davinci_expansion_test.csv`
+    - Train:  `data/humvi_expansion_train.csv`
+    - Test: `data/humvi_expansion_test.csv`
 - Unlabeled
 
 
